@@ -1,7 +1,7 @@
 import Home from "./Components/Home";
 import Layout from "./Components/Layout";
 import Cities from "./Components/Cities";
-import { BrowserRouter as Router, Routes, Route } from "react-router";
+import { HashRouter as Router, Routes, Route } from "react-router";
 
  export default function App() {
   return (

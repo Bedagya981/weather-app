@@ -10,7 +10,6 @@ export default function Home(){
     const [city, setCity] = useState('');
     const [data, setData] = useState<ApiResponse | null>(null)
     const [refCity, setRefCity] = useState('')
-  // You'll implement these handlers
   const handleSearch = async (e: React.FormEvent<HTMLFormElement>) => { // change this
     e.preventDefault();
     if(!city.trim()){
@@ -92,9 +91,7 @@ export default function Home(){
   ] : []
     return(
       <div className="w-full">
-      {/* Main content */}
       <div className="max-w-4xl mx-auto py-8 sm:py-12 px-4">
-        {/* Header section */}
         <div className="text-center mb-8 sm:mb-12">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold mb-3 text-gray-900 dark:text-gray-100">
             Weather
@@ -104,10 +101,8 @@ export default function Home(){
           </p>
         </div>
 
-        {/* Search section */}
         <div className="w-full max-w-2xl mx-auto mb-10 sm:mb-16">
           <form onSubmit={handleSearch}>
-            {/* Search input container */}
             <div className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg">
               <div className="flex items-center px-4 py-3 sm:px-5 sm:py-4">
                 <MapPin className="w-5 h-5 text-gray-500 dark:text-gray-400 mr-3 shrink-0" />
@@ -137,7 +132,6 @@ export default function Home(){
             </div>
           </form>
 
-          {/* Quick suggestions */}
           <div className="mt-4 flex flex-wrap justify-center gap-2">
             {['Kathmandu', 'Lalitpur', 'Bhaktapur', 'Sydney', 'Texas'].map((suggestedCity) => (
               <button
@@ -151,7 +145,6 @@ export default function Home(){
           </div>
         </div>
 
-        {/* Feature cards - decorative */}
         <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-3 sm:gap-3">
           {
             cards.map((feature) => (

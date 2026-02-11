@@ -26,7 +26,6 @@ export default function Sidebar() {
 
   return (
     <>
-      {/* Mobile Menu Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="lg:hidden fixed top-4 right-4 z-50 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg text-gray-900 dark:text-white"
@@ -34,7 +33,6 @@ export default function Sidebar() {
         {isOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
-      {/* Overlay for mobile */}
       {isOpen && (
         <div
           onClick={() => setIsOpen(false)}
@@ -42,7 +40,6 @@ export default function Sidebar() {
         />
       )}
 
-      {/* Sidebar */}
       <aside
         className={`
           shrink-0 w-64 bg-gray-200 dark:bg-gray-900 text-gray-900 dark:text-white
@@ -74,7 +71,6 @@ export default function Sidebar() {
             </nav>
           </div>
 
-          {/* Theme Toggle Button */}
           <button
             onClick={handleThemeChange}
             className="flex items-center justify-center gap-3 px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors w-full mt-auto"

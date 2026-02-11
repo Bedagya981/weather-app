@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/weather-app/',  // Make sure this has trailing slash
+  base: '/weather-app/',
   build: {
     outDir: 'dist',
     emptyOutDir: true,
